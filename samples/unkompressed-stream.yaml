@@ -1,0 +1,7 @@
+apiVersion: stream.projectriff.io/v1alpha1
+kind: Stream
+metadata:
+  name: unkompressed
+spec:
+  provider: kafka-provider
+

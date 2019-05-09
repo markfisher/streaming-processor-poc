@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kafka-client
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: kafka-client
+      labels:
+        app: kafka-client
+    spec:
+      containers:
+      - name: kafka
+        image: confluentinc/cp-kafka:5.0.3
+        command:
+        - sh
+        - -c
+        - "exec tail -f /dev/null"
+

@@ -1,0 +1,11 @@
+apiVersion: stream.projectriff.io/v1alpha1
+kind: StreamProcessor
+metadata:
+  name: kmprssr
+spec:
+  inputs:
+  - unkompressed
+  function: ericbottard/kmprssr:grpc
+  outputs:
+  - kompressed
+
